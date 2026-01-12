@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Costing Aesthetic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-deep': '#1B263B',
+            'navy-light': '#415A77',
+            'soft-bg': '#F0F4F8',
+          },
+          fontFamily: {
+            'cute': ['Quicksand', 'sans-serif'],
+            'body': ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { 
+      background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 100%);
+      min-height: 100-vh;
+    }
+    .floating-emoji {
+      position: absolute;
+      animation: float 3s ease-in-out infinite;
+      z-index: 0;
+      opacity: 0.6;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
